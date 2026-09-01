@@ -1,0 +1,284 @@
+/* Phase 3 UX Design Specification: Education & Projects */
+
+:root {
+  /* Obsidian Dark Base */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #121212;
+  --bg-tertiary: #1a1a1a;
+  
+  /* Neon Lime Accents */
+  --accent-lime: #a3e635; /* Primary interaction color */
+  --accent-lime-dim: rgba(163, 230, 53, 0.2); /* Glow & Hover states */
+  
+  /* Text */
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-muted: #4b5563;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-glow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --glass-blur: blur(12px);
+}
+
+.section-edu-proj {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 5rem 1.5rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow: hidden;
+}
+
+.section-edu-proj .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-edu-proj .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+/* =========================================
+   Timeline Layout
+   ========================================= */
+.timeline-section {
+  margin-bottom: 6rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Timeline Line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px; /* Mobile far left */
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--bg-tertiary) 5%, var(--bg-tertiary) 95%, transparent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 50px; /* Space for node and line on mobile */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Timeline Node */
+.timeline-node {
+  position: absolute;
+  left: 13px; /* Centers the 16px node on the 2px line at left:20px */
+  top: 1.5rem;
+  width: 16px;
+  height: 16px;
+  background-color: var(--accent-lime);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-lime-dim), 0 0 20px var(--accent-lime-dim);
+}
+
+/* Timeline Card */
+.timeline-content {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-content:hover {
+  border-color: var(--accent-lime-dim);
+}
+
+.timeline-title {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.timeline-meta {
+  color: var(--accent-lime);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+/* Desktop Timeline Alternating Layout */
+@media (min-width: 1024px) {
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    width: 50%;
+    padding-left: 0;
+    padding-right: 40px; /* Right padding for left items */
+  }
+  
+  .timeline-node {
+    left: 100%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item:nth-child(even) {
+    margin-left: auto;
+    padding-right: 0;
+    padding-left: 40px;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-node {
+    left: 0;
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================================
+   Glassmorphism Projects Grid
+   ========================================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: var(--glass-glow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-lime-dim);
+  box-shadow: 0 8px 32px 0 rgba(163, 230, 53, 0.15);
+}
+
+/* Abstract tech visual placeholders */
+.project-header {
+  height: 140px;
+  background-color: var(--bg-tertiary);
+}
+
+.mesh-1 { background: linear-gradient(135deg, #1a1a1a, #0a2e12); }
+.mesh-2 { background: linear-gradient(135deg, #1a1a1a, #112a46); }
+.mesh-3 { background: linear-gradient(135deg, #1a1a1a, #2b1133); }
+.mesh-4 { background: linear-gradient(135deg, #1a1a1a, #332a11); }
+
+.project-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 500;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.project-link {
+  margin-top: auto;
+  color: var(--accent-lime);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.project-link:hover {
+  opacity: 0.8;
+}
+
+/* =========================================
+   Micro-interactions & Animations
+   ========================================= */
+.timeline-item.reveal {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timeline-item.reveal.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* For even items on desktop slide from right */
+@media (min-width: 1024px) {
+  .timeline-item:nth-child(even).reveal {
+    transform: translateX(20px);
+  }
+  .timeline-item:nth-child(even).reveal.visible {
+    transform: translateX(0);
+  }
+}
+
+.project-card.reveal {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--delay, 0s);
+}
+
+.project-card.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}

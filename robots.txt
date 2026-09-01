@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mustafahassan.vercel.app/sitemap.xml

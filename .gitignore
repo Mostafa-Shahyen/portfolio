@@ -1,0 +1,9 @@
+# Ignore AI agents and environment folders
+.agents/
+.gemini/
+scratch/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
