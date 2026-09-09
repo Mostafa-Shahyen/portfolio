@@ -633,7 +633,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================
 // Theme Switcher Logic
 // ==========================================
-const themes = ['default', 'cyan', 'purple'];
+const themes = ['default', 'lime', 'purple'];
 let currentThemeIndex = 0;
 const themeToggleBtn = document.getElementById('theme-toggle');
 
@@ -656,3 +656,4 @@ if(themeToggleBtn) {
       }
     });
 }
+
