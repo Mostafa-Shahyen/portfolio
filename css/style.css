@@ -1354,9 +1354,10 @@ button {
 }
 
 /* إخفاء أدوات الموبايل تماماً من شاشات الكمبيوتر */
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .mobile-menu-btn, .mobile-only, .mobile-menu-overlay {
         display: none !important;
     }
 }
+
 
