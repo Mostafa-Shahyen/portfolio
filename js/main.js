@@ -486,7 +486,9 @@ class ContactManager {
                 await new Promise(resolve => setTimeout(resolve, 1500));
             }
             
-            this.handleSuccess();
+                        this.handleSuccess();
+            // Record successful send time for rate limiting
+            localStorage.setItem('lastEmailSent', new Date().getTime());
         } catch (error) {
             this.handleError(error);
         } finally {
@@ -656,4 +658,5 @@ if(themeToggleBtn) {
       }
     });
 }
+
 

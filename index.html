@@ -323,20 +323,20 @@
       <form id="contact-form" class="contact-form">
         <div class="form-group">
           <label for="name" class="visually-hidden">Name</label>
-          <input type="text" id="name" name="name" placeholder="Name" aria-label="Name" required>
+          <input type="text" id="name" name="name" placeholder="Name" aria-label="Name" maxlength="50" required>
         </div>
         <div class="form-group">
           <label for="email" class="visually-hidden">Email</label>
-          <input type="email" id="email" name="email" placeholder="Email" aria-label="Email" required>
+          <input type="email" id="email" name="email" placeholder="Email" aria-label="Email" maxlength="100" required>
           <span class="error-msg">Valid email required</span>
         </div>
         <div class="form-group">
           <label for="subject" class="visually-hidden">Subject</label>
-          <input type="text" id="subject" name="subject" placeholder="Subject" aria-label="Subject" required>
+          <input type="text" id="subject" name="subject" placeholder="Subject" aria-label="Subject" maxlength="100" required>
         </div>
         <div class="form-group">
           <label for="message" class="visually-hidden">Message</label>
-          <textarea id="message" name="message" placeholder="Message" aria-label="Message" rows="5" required></textarea>
+          <textarea id="message" name="message" placeholder="Message" aria-label="Message" rows="5" maxlength="1000" required></textarea>
         </div>
         <button type="submit" class="submit-btn">
           <span class="btn-text">Send Message</span>
@@ -404,6 +404,7 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
 
 
 
