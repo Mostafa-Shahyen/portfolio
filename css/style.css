@@ -253,7 +253,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at top right, rgba(0, 229, 255, 0.1), transparent 40%);
+  background: radial-gradient(circle at top right, var(--accent-primary-glow-light), transparent 40%);
   pointer-events: none;
   z-index: -1;
 }
@@ -684,7 +684,7 @@ button {
   top: 1.5rem;
   width: 16px;
   height: 16px;
-  background-color: var(--accent-lime);
+  background-color: var(--accent-primary);
   border-radius: 50%;
   box-shadow: 0 0 10px var(--accent-primary-glow-light), 0 0 20px var(--accent-primary-glow-light);
 }
@@ -710,7 +710,7 @@ button {
 }
 
 .timeline-meta {
-  color: var(--accent-lime);
+  color: var(--accent-primary);
   font-weight: 500;
   font-size: 0.875rem;
 }
@@ -807,7 +807,7 @@ button {
 
 .project-link {
   margin-top: auto;
-  color: var(--accent-lime);
+  color: var(--accent-primary);
   font-weight: 500;
   font-size: 0.95rem;
   text-decoration: none;
@@ -1390,5 +1390,7 @@ button {
   color: var(--accent-primary);
   box-shadow: 0 0 10px var(--accent-primary-glow-light); /* Keep it subtle */
 }
+
+
 
 
