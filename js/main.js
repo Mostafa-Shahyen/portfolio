@@ -629,3 +629,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
+// ==========================================
+// Theme Switcher Logic
+// ==========================================
+const themes = ['default', 'cyan', 'purple'];
+let currentThemeIndex = 0;
+const themeToggleBtn = document.getElementById('theme-toggle');
+
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme && savedTheme !== 'default') {
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  currentThemeIndex = themes.indexOf(savedTheme) !== -1 ? themes.indexOf(savedTheme) : 0;
+}
+
+if(themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+      const newTheme = themes[currentThemeIndex];
+      if (newTheme === 'default') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'default');
+      } else {
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+      }
+    });
+}

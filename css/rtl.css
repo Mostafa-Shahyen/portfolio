@@ -1,0 +1,56 @@
+/* RTL Specific Overrides for Arabic Version */
+body {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Space Grotesk', 'Cairo', sans-serif; /* Fallback to a good Arabic font if available */
+}
+
+/* Fix Hero alignment */
+.hero-content {
+  text-align: right;
+  align-items: flex-start;
+}
+
+/* Nav alignment */
+.nav-actions {
+  margin-left: 2rem;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  .nav-actions {
+    margin-left: 1rem;
+    margin-right: auto;
+  }
+}
+
+.nav-links {
+  gap: 2.5rem;
+}
+
+/* Timeline alignment */
+.timeline::before {
+  left: auto;
+  right: 20px;
+}
+
+.timeline-item {
+  padding-left: 0;
+  padding-right: 50px;
+}
+
+.timeline-node {
+  left: auto;
+  right: 13px;
+}
+
+/* Cards and Grid */
+.glass-pill {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+/* Mobile Menu Overlay */
+.mobile-nav-links {
+  align-items: center;
+}
+
