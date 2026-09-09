@@ -14,12 +14,12 @@ body {
 /* Nav alignment */
 .nav-actions {
   margin-left: 2rem;
-  margin-right: auto;
+  
 }
 @media (max-width: 768px) {
   .nav-actions {
     margin-left: 1rem;
-    margin-right: auto;
+    
   }
 }
 
@@ -99,3 +99,4 @@ body {
   unicode-bidi: plaintext;
   display: inline-block;
 }
+
