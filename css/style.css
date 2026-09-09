@@ -1,64 +1,43 @@
 /* 2. Design System Tokens */
 :root {
-  --bg-primary: #050505;
-  --bg-secondary: #0a0a0a;
-  --accent-lime: #ccff00;
-  --accent-lime-dim: rgba(204, 255, 0, 0.15);
-  --glass-bg: rgba(10, 10, 10, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --text-primary: #f5f5f5;
-  --text-secondary: #a0a0a0;
-  --neon-lime: #ccff00;
-}
+  --bg-base: #09090b;
+  --bg-surface: #18181b;
+  --accent-primary: #00e5ff;
+  --accent-secondary: #8b5cf6;
+  --text-primary: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #52525b;
 
-[data-theme="cyan"] {
-  --accent-lime: #00e5ff;
-  --accent-lime-dim: rgba(0, 229, 255, 0.15);
-  --neon-lime: #00e5ff;
-}
+  --glass-bg: rgba(9, 9, 11, 0.65);
+  --glass-blur: blur(16px) saturate(180%);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+  --glass-border-hover: 1px solid rgba(255, 255, 255, 0.15);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 
-[data-theme="purple"] {
-  --accent-lime: #bc13fe;
-  --accent-lime-dim: rgba(188, 19, 254, 0.15);
-  --neon-lime: #bc13fe;
-}
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 
-/* Nav Actions (Theme & Lang) */
-@media (max-width: 768px) { .nav-actions {
-  margin-left: 2rem; margin-right: 1rem; } }
-.nav-actions {
-  margin-left: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  
-  margin-right: 2rem;
-}
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-4xl: clamp(2rem, 5vw, 2.5rem);
+  --text-hero: clamp(2.5rem, 8vw, 4.5rem);
 
-.theme-toggle, .lang-toggle {
-  background: transparent;
-  border: 1px solid var(--glass-border);
-  color: var(--text-primary);
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-decoration: none;
-}
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 48px;
+  --space-2xl: 96px;
 
-.theme-toggle:hover, .lang-toggle:hover {
-  border-color: var(--accent-lime);
-  color: var(--accent-lime);
-  box-shadow: 0 0 10px var(--accent-lime-dim);
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-full: 9999px;
 }
-
 
 /* Base Resets & Global Styles */
 body {
@@ -621,65 +600,26 @@ button {
 /* Phase 3 UX Design Specification: Education & Projects */
 
 :root {
-  --bg-primary: #050505;
-  --bg-secondary: #0a0a0a;
-  --accent-lime: #ccff00;
-  --accent-lime-dim: rgba(204, 255, 0, 0.15);
-  --glass-bg: rgba(10, 10, 10, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --text-primary: #f5f5f5;
-  --text-secondary: #a0a0a0;
-  --neon-lime: #ccff00;
-}
-
-[data-theme="cyan"] {
-  --accent-lime: #00e5ff;
-  --accent-lime-dim: rgba(0, 229, 255, 0.15);
-  --neon-lime: #00e5ff;
-}
-
-[data-theme="purple"] {
-  --accent-lime: #bc13fe;
-  --accent-lime-dim: rgba(188, 19, 254, 0.15);
-  --neon-lime: #bc13fe;
-}
-
-/* Nav Actions (Theme & Lang) */
-@media (max-width: 768px) { .nav-actions {
-  margin-left: 2rem; margin-right: 1rem; } }
-.nav-actions {
-  margin-left: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  /* Obsidian Dark Base */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #121212;
+  --bg-tertiary: #1a1a1a;
   
-  margin-right: 2rem;
-}
+  /* Neon Lime Accents */
+  --accent-lime: #a3e635; /* Primary interaction color */
+  --accent-lime-dim: rgba(163, 230, 53, 0.2); /* Glow & Hover states */
+  
+  /* Text */
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-muted: #4b5563;
 
-.theme-toggle, .lang-toggle {
-  background: transparent;
-  border: 1px solid var(--glass-border);
-  color: var(--text-primary);
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-decoration: none;
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-glow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --glass-blur: blur(12px);
 }
-
-.theme-toggle:hover, .lang-toggle:hover {
-  border-color: var(--accent-lime);
-  color: var(--accent-lime);
-  box-shadow: 0 0 10px var(--accent-lime-dim);
-}
-
 
 .section-edu-proj {
   background-color: var(--bg-primary);
@@ -909,65 +849,17 @@ button {
 /* Contact & Footer Styles */
 
 :root {
-  --bg-primary: #050505;
-  --bg-secondary: #0a0a0a;
-  --accent-lime: #ccff00;
-  --accent-lime-dim: rgba(204, 255, 0, 0.15);
-  --glass-bg: rgba(10, 10, 10, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --text-primary: #f5f5f5;
-  --text-secondary: #a0a0a0;
   --neon-lime: #ccff00;
+  --neon-lime-hover: #d4ff33;
+  --bg-darker: #050505;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --input-bg: rgba(0, 0, 0, 0.4);
+  --input-border: rgba(255, 255, 255, 0.15);
+  --error-color: #ff4444;
+  --success-color: #00cc66;
+  --transition-smooth: all 0.3s ease;
 }
-
-[data-theme="cyan"] {
-  --accent-lime: #00e5ff;
-  --accent-lime-dim: rgba(0, 229, 255, 0.15);
-  --neon-lime: #00e5ff;
-}
-
-[data-theme="purple"] {
-  --accent-lime: #bc13fe;
-  --accent-lime-dim: rgba(188, 19, 254, 0.15);
-  --neon-lime: #bc13fe;
-}
-
-/* Nav Actions (Theme & Lang) */
-@media (max-width: 768px) { .nav-actions {
-  margin-left: 2rem; margin-right: 1rem; } }
-.nav-actions {
-  margin-left: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  
-  margin-right: 2rem;
-}
-
-.theme-toggle, .lang-toggle {
-  background: transparent;
-  border: 1px solid var(--glass-border);
-  color: var(--text-primary);
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-decoration: none;
-}
-
-.theme-toggle:hover, .lang-toggle:hover {
-  border-color: var(--accent-lime);
-  color: var(--accent-lime);
-  box-shadow: 0 0 10px var(--accent-lime-dim);
-}
-
 
 .contact-section {
   padding: 5rem 2rem;
@@ -1437,5 +1329,56 @@ button {
 
 
 
+/* ========================================= */
+/* Theme Switcher Variables                  */
+/* ========================================= */
+[data-theme="lime"] {
+  --accent-primary: #ccff00;
+  --accent-secondary: #00e5ff;
+}
 
+[data-theme="purple"] {
+  --accent-primary: #bc13fe;
+  --accent-secondary: #00e5ff;
+}
+
+/* Nav Actions (Theme & Lang) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .nav-actions {
+    margin-left: 2rem;
+    margin-right: 1rem;
+  }
+}
+
+.theme-toggle, .lang-toggle {
+  background: transparent;
+  border: var(--glass-border);
+  color: var(--text-primary);
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  text-decoration: none;
+}
+
+.theme-toggle:hover, .lang-toggle:hover {
+  border: var(--glass-border-hover);
+  color: var(--accent-primary);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.15); /* Keep it subtle */
+}
 
