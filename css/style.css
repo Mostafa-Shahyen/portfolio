@@ -1291,17 +1291,7 @@ button {
 }
 
 
-/* إخفاء قائمة الموبايل العائمة وعلامة الـ X من شاشات الكمبيوتر تماماً */
-@media (min-width: 769px) {
-    .mobile-nav, 
-    .mobile-menu, 
-    .mobile-menu-btn, 
-    .close-menu-btn,
-    .close-btn {
-        display: none !important;
-        opacity: 0 !important;
-        visibility: hidden !important;
-    }
+
 }
 
 /* جعل قائمة الموبايل تفتح بخلفية سوداء صلبة لمنع تداخل النصوص */
@@ -1335,4 +1325,5 @@ button {
     color: white !important;
     font-weight: bold !important;
 }
+
 
