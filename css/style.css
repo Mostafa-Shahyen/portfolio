@@ -1294,22 +1294,7 @@ button {
 
 }
 
-/* جعل قائمة الموبايل تفتح بخلفية سوداء صلبة لمنع تداخل النصوص */
-.mobile-nav, 
-.mobile-menu, 
-.nav-links.active {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    background: #0a0a0a !important; /* لون أسود داكن صلب */
-    z-index: 9998 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
+
 
 /* تنسيق الكلمات وإبعادها عن بعضها داخل الخلفية السوداء */
 .mobile-nav li, 
@@ -1326,4 +1311,52 @@ button {
     font-weight: bold !important;
 }
 
+
+
+
+/* إصلاح قائمة الموبايل بشكل نهائي واحترافي */
+.mobile-menu-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(10, 10, 10, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 9998 !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.mobile-nav-links {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 30px !important;
+}
+
+.mobile-link {
+    font-size: 28px !important;
+    color: white !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+}
+
+/* إخفاء أدوات الموبايل تماماً من شاشات الكمبيوتر */
+@media (min-width: 769px) {
+    .mobile-menu-btn, .mobile-only, .mobile-menu-overlay {
+        display: none !important;
+    }
+}
 
