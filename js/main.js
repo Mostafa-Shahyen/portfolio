@@ -476,11 +476,7 @@ class ContactManager {
 
         try {
             if (typeof emailjs !== 'undefined') {
-                // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual EmailJS IDs
-                // await emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this.form);
-                
-                // Simulating API call for demonstration (remove if using real EmailJS)
-                await new Promise(resolve => setTimeout(resolve, 1500));
+                await emailjs.sendForm('service_grs91vq', 'template_5mz722s', this.form);
             } else {
                 // Simulating API call for demonstration
                 await new Promise(resolve => setTimeout(resolve, 1500));
@@ -658,5 +654,6 @@ if(themeToggleBtn) {
       }
     });
 }
+
 
 
