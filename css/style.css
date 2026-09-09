@@ -711,35 +711,7 @@ button {
   font-size: 0.875rem;
 }
 
-/* Desktop Timeline Alternating Layout */
-@media (min-width: 1024px) {
-  .timeline::before {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .timeline-item {
-    width: 50%;
-    padding-left: 0;
-    padding-right: 40px; /* Right padding for left items */
-  }
-  
-  .timeline-node {
-    left: 100%;
-    transform: translateX(-50%);
-  }
 
-  .timeline-item:nth-child(even) {
-    margin-left: auto;
-    padding-right: 0;
-    padding-left: 40px;
-  }
-  
-  .timeline-item:nth-child(even) .timeline-node {
-    left: 0;
-    transform: translateX(-50%);
-  }
-}
 
 /* =========================================
    Glassmorphism Projects Grid
@@ -1359,5 +1331,6 @@ button {
         display: none !important;
     }
 }
+
 
 
