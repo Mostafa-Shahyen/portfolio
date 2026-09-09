@@ -11,6 +11,15 @@
     <meta property="og:image" content="https://mostafa-hassan-ai.vercel.app/assets/images/profile.jpg">
     <meta property="og:url" content="https://mostafa-hassan-ai.vercel.app">
     <meta property="og:type" content="website">
+    <link rel="canonical" href="https://mostafa-hassan-ai.vercel.app/" />
+    <link rel="alternate" hreflang="en" href="https://mostafa-hassan-ai.vercel.app/" />
+    <link rel="alternate" hreflang="ar" href="https://mostafa-hassan-ai.vercel.app/index-ar.html" />
+    <link rel="alternate" hreflang="x-default" href="https://mostafa-hassan-ai.vercel.app/" />
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mostafa Hassan | AI Engineer">
+    <meta name="twitter:description" content="AI Engineering student specializing in Machine Learning, Computer Vision, and NLP.">
+    <meta name="twitter:image" content="https://mostafa-hassan-ai.vercel.app/assets/images/profile.jpg">
     <meta name="author" content="Mostafa Hassan">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -314,20 +323,20 @@
       <form id="contact-form" class="contact-form">
         <div class="form-group">
           <label for="name" class="visually-hidden">Name</label>
-          <input type="text" id="name" name="name" placeholder="Name" required>
+          <input type="text" id="name" name="name" placeholder="Name" aria-label="Name" required>
         </div>
         <div class="form-group">
           <label for="email" class="visually-hidden">Email</label>
-          <input type="email" id="email" name="email" placeholder="Email" required>
+          <input type="email" id="email" name="email" placeholder="Email" aria-label="Email" required>
           <span class="error-msg">Valid email required</span>
         </div>
         <div class="form-group">
           <label for="subject" class="visually-hidden">Subject</label>
-          <input type="text" id="subject" name="subject" placeholder="Subject" required>
+          <input type="text" id="subject" name="subject" placeholder="Subject" aria-label="Subject" required>
         </div>
         <div class="form-group">
           <label for="message" class="visually-hidden">Message</label>
-          <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+          <textarea id="message" name="message" placeholder="Message" aria-label="Message" rows="5" required></textarea>
         </div>
         <button type="submit" class="submit-btn">
           <span class="btn-text">Send Message</span>
@@ -395,6 +404,8 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
+
 
 
 
