@@ -831,15 +831,7 @@ button {
   transform: translateX(0);
 }
 
-/* For even items on desktop slide from right */
-@media (min-width: 1024px) {
-  .timeline-item:nth-child(even).reveal {
-    transform: translateX(20px);
-  }
-  .timeline-item:nth-child(even).reveal.visible {
-    transform: translateX(0);
-  }
-}
+
 
 .project-card.reveal {
   opacity: 0;
@@ -1331,6 +1323,7 @@ button {
         display: none !important;
     }
 }
+
 
 
 
