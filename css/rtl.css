@@ -54,3 +54,48 @@ body {
   align-items: center;
 }
 
+/* Fix dot position in RTL flex container */
+.section-title {
+  display: block;
+}
+
+.timeline::before {
+  left: auto !important;
+  right: 20px !important;
+}
+
+.timeline-node {
+  left: auto !important;
+  right: 13px !important;
+}
+
+.timeline-item {
+  padding-left: 0 !important;
+  padding-right: 50px !important;
+  text-align: right !important;
+}
+
+.timeline-content {
+  text-align: right;
+}
+
+.contact-container {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
+.form-group input, .form-group textarea {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Fix LTR strings (like C++) in RTL context */
+.skill-tag {
+  unicode-bidi: plaintext;
+  display: inline-block;
+}
