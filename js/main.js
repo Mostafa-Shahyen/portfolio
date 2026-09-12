@@ -657,3 +657,18 @@ if(themeToggleBtn) {
 
 
 
+
+
+// Anti-Spam Email Protection
+document.querySelectorAll('.protected-email').forEach(el => {
+    el.addEventListener('click', (e) => {
+        e.preventDefault();
+        const user = el.getAttribute('data-user');
+        const domain = el.getAttribute('data-domain');
+        const email = user + '@' + domain;
+        el.textContent = email;
+        el.href = 'mailto:' + email;
+        el.classList.remove('protected-email');
+        window.location.href = el.href;
+    });
+});
